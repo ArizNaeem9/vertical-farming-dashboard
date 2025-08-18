@@ -103,9 +103,6 @@ Android
 
 yarn run android
 
-📸 Screenshots
-
-(Add sensor dashboard, plant list, and health suggestions screenshots here)
 
 📌 Version
 
