@@ -1,4 +1,4 @@
-🌱 Hydropontia — Hydroponics Monitoring App & D3 Analytics
+# 🌱 Hydropontia — Hydroponics Monitoring App & D3 Analytics
 
 A Flutter application (Android · iOS · Web · Desktop stubs) for monitoring hydroponic systems using BLE sensors and visual dashboards. The app integrates with the Hydropontia Web Dashboard (D3.js) and REST APIs for data ingestion and analytics.
 
