@@ -4,7 +4,7 @@ A Flutter application (Android · iOS · Web · Desktop stubs) for monitoring hy
 
 Impact (Web Dashboard): Created interactive D3.js visualizations and optimized SVG rendering to reduce dashboard load times by 7% and speed decision-making by 12%. Built and integrated REST APIs powering ingestion and visualization workflows end to end.
 
-📌 What you get in this repo
+## 📌 What you get in this repo
 
 A Flutter client with platform runners (Android/iOS/Web) and UI assets (Roboto/Fredoka, SVGs, sounds).
 
@@ -16,7 +16,7 @@ Integration points for the companion Hydropontia D3 Web Dashboard and REST APIs 
 
 Note: The D3 dashboard and API service live outside this repository. This app consumes them. See “Integration” sections for URLs, schemas, and setup notes.
 
-🚀 Features (App)
+## 🚀 Features (App)
 
 📡 Real-time monitoring (BLE): pH, temperature, humidity, light intensity
 
@@ -28,7 +28,7 @@ Note: The D3 dashboard and API service live outside this repository. This app co
 
 🌐 Multi-platform: Android, iOS, Web (configured), Desktop stubs
 
-🧠 Architecture Overview
+## 🧠 Architecture Overview
 
 Layered design so you can develop and test each piece in isolation:
 
@@ -47,7 +47,7 @@ Hydropontia Web Dashboard (D3.js): Interactive SVG charts with rendering optimiz
 
 Hydropontia REST API: Ingestion endpoints for samples and query endpoints for analytics.
 
-🧩 D3.js Hydropontia Web Dashboard (Companion)
+# 🧩 D3.js Hydropontia Web Dashboard (Companion)
 
 Tech: D3.js + SVG + performant rendering patterns (join/update, batching, requestIdleCallback)
 
@@ -71,9 +71,7 @@ Consistent axis/legend semantics across views
 
 Integration pattern: open the D3 dashboard in an in-app WebView (mobile) or hyperlink/route from the Flutter Web build. Pass plant or time-range context via query params, e.g. https://dashboard.example.com?plantId=abc123&from=2025-09-01.
 
-🔌 REST API (Companion)
-
-Base URL (example): https://api.hydropontia.example.com
+## 🔌 REST API (Companion)
 
 Ingestion
 
@@ -88,7 +86,7 @@ POST /api/v1/samples
   "lightLux": 8200
 }
 
-Queries
+## Queries
 
 GET /api/v1/plants/{plantId}/metrics?from=2025-09-01&to=2025-09-10
 
@@ -104,7 +102,7 @@ GET /api/v1/plants/{plantId}/metrics?from=2025-09-01&to=2025-09-10
 
 Tip: During local development, use a mock server (e.g., Postman Mock / json-server) or point to a staging API. The Flutter app’s API base URL can be read from a config file or set per build flavor.
 
-🧑‍💻 Tech Stack
+## 🧑‍💻 Tech Stack
 
 App: Flutter (Dart), flutter_svg for crisp icons & diagrams
 
@@ -116,7 +114,7 @@ Web: Flutter Web (index/manifest in /web)
 
 Assets: Roboto + Fredoka fonts, SVGs, alert sound
 
-📂 Project Structure (from this repo)
+## 📂 Project Structure (from this repo)
 / (project root)
 ├─ assets/
 │  ├─ fonts/                 # Roboto, Fredoka
@@ -137,7 +135,7 @@ Assets: Roboto + Fredoka fonts, SVGs, alert sound
 
 (Android sources may appear under a src/main/... structure depending on your template; Kotlin MainActivity.kt and AndroidManifest.xml are present.)
 
-⚙️ Setup & Run
+## ⚙️ Setup & Run
 Prereqs
 
 Flutter SDK (stable): https://docs.flutter.dev/get-started/install
@@ -159,7 +157,7 @@ flutter build apk --release     # Android
 flutter build ios --release     # iOS (then archive/sign in Xcode)
 flutter build web --release     # Web (deploy /build/web)
 
-📡 BLE Integration (Add-on)
+## 📡 BLE Integration (Add-on)
 
 Android (API 31+): add BLUETOOTH_SCAN / BLUETOOTH_CONNECT and request runtime permissions.
 iOS: add NSBluetoothAlwaysUsageDescription / NSBluetoothPeripheralUsageDescription in Info.plist.
@@ -172,7 +170,7 @@ BleSensorProvider for production sensors
 
 Swap via a config flag or build flavor.
 
-📈 Performance Receipts (Web Dashboard)
+## 📈 Performance Receipts (Web Dashboard)
 
 Goal: improve dashboard load (perceived & measured) and reduce time-to-insight.
 
@@ -192,7 +190,7 @@ Result: –7% dashboard load time (LCP proxy) and +12% decision speed in a timed
 
 While the Flutter app can render charts itself, the Hydropontia D3 dashboard remains the preferred environment for heavy data exploration on the web.
 
-🔒 Privacy & Security
+## 🔒 Privacy & Security
 
 Do not commit keys or BLE identifiers.
 
@@ -200,7 +198,7 @@ Avoid sharing geo/owner data in screenshots.
 
 If exporting logs, anonymize plant and device IDs.
 
-🧪 Testing
+## 🧪 Testing
 flutter test
 
 
@@ -214,7 +212,7 @@ Chart renders and empty/edge-case states
 
 Deep link to the D3 dashboard (WebView or link)
 
-🗺️ Roadmap
+## 🗺️ Roadmap
 
  BLE auto-reconnect & signal-strength indicators
 
@@ -226,7 +224,7 @@ Deep link to the D3 dashboard (WebView or link)
 
  Web: deeper D3 modules for anomaly detection
 
-🤝 Contributing
+## 🤝 Contributing
 
 Issues and PRs welcome. Please:
 
@@ -236,12 +234,12 @@ Add tests for user-facing or data-path changes
 
 Describe performance impact (if any)
 
-📝 License
+## 📝 License
 
 Code in this repository is provided under the MIT License.
 Third-party assets (fonts/icons) follow their own licenses as noted.
 
-Credits
+## Credits
 
 Flutter community for plugins and guidance
 
